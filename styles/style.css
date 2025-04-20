@@ -1,1 +1,69 @@
+.menu__section {
+  box-sizing: border-box;
+  align-items: center;
+  width: 1052px;
+  height: 105px;
+  margin: auto;
+  padding-inline: 26px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 92px 24px 96px;
+}
 
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 391px;
+  height: 22px;
+}
+
+.header__menu-list {
+  display: flex;
+  list-style: none;
+  gap: 13px;
+}
+
+.header__menu-link {
+  text-underline-offset: 0.5px; /*стоит ли добавлять?*/
+}
+
+.header__menu-link__main {
+  text-decoration: none;
+}
+
+.header__menu-link__active::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-right: 13px;
+}
+
+/* .logo {
+  width: 150px;
+}
+
+.header__logo {
+  display: block;
+  width: 150px;
+} */
+
+.header__logo-image {
+  width: 148px;
+  height: 105px;
+  position: relative;
+  left: 454px;
+  right: 450px;
+}
+.header__navigation {
+  display: flex;
+  flex-direction: column;
+}
+.header__navigation-list {
+  list-style: none;
+  width: 178px;
+}
