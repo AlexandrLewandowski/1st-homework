@@ -3,7 +3,6 @@
   align-items: center;
   width: 1052px;
   height: 105px;
-  margin: auto;
   padding-inline: 26px;
 }
 .header {
@@ -42,22 +41,22 @@
   border: 1px solid #000;
   margin-right: 13px;
 }
-
-/* .logo {
-  width: 150px;
+.logo {
+  position: absolute;
+  left: 454px;
+  right: 450px;
 }
-
 .header__logo {
   display: block;
   width: 150px;
-} */
+}
 
 .header__logo-image {
   width: 148px;
   height: 105px;
-  position: relative;
+  /* position: relative;
   left: 454px;
-  right: 450px;
+  right: 450px; */
 }
 .header__navigation {
   display: flex;
