@@ -4,6 +4,7 @@
   grid-template-columns: 391px 1fr 1fr;
   margin-inline: 24px;
   margin-top: 94px;
+  margin-bottom: 96px;
   width: 1052px;
 }
 
@@ -64,4 +65,168 @@
 
 .contacts__phone {
   border-bottom: 1px solid #000;
+}
+
+.cover {
+  min-height: 757px;
+  color: rgb(255, 255, 255);
+}
+
+.content__section {
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  padding: 165px 50px 147px 50px;
+}
+
+.accent__span {
+  display: block;
+  letter-spacing: 0.3em;
+  line-height: 100%;
+}
+
+.accent__span-inner {
+  letter-spacing: 0.6em;
+}
+
+.text__top {
+  display: flex;
+  justify-content: start;
+  line-height: 115%;
+}
+
+.text__center {
+  display: flex;
+  justify-content: center;
+  margin-block: 20px;
+}
+
+.text__right {
+  display: flex;
+  justify-content: end; /*тут нужно поработать с тем, что не упирается надпись в марджин(как убрать хвост из пробела после слова) */
+}
+
+.slogan__inner {
+  display: flex;
+  justify-content: space-between; /*хз как стоит раскинуть по краям*/
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 127%;
+  padding-inline: 78px 50px;
+}
+
+.slogan__text {
+  max-width: 637px;
+  width: 100%; /*не могу найти letter-spacing: никак блять -_-; */
+}
+
+.btn {
+  width: 256px;
+  height: 51px;
+  font-weight: 500;
+  font-size: 22px; /* -почему цвет и размер на кнопку не распространился? */
+  text-transform: uppercase;
+  color: #fff;
+  background-color: unset;
+  border: 1px solid #fff;
+  margin-left: 79px;
+  margin-bottom: 51px;
+  padding: 0;
+}
+
+.btn:active {
+  background-color: #351351;
+  color: red;
+}
+
+.lots__wrapper {
+  min-width: 1052px;
+  margin-block: 179px 146px;
+  margin-inline: 25px;
+}
+
+.lots__title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.lots__title-list {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  list-style: none;
+}
+
+.lots__title-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 334px;
+  min-height: 563px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 400;
+  padding: 51px 40px 48px 40px;
+}
+
+.lots__title-list__item-film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__title-list__item-book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__title-list__item-picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__title-list__accent {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.btn__more {
+  font-size: 20px;
+  line-height: 23px;
+  width: 192px;
+  height: 23px;
+  background-color: unset;
+  border: unset;
+  left: 40px;
+  margin-left: 40px;
+  padding: 0;
+}
+
+.btn__more:active {
+  background-color: #351351;
+  color: red;
 }
