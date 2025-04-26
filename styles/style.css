@@ -1,7 +1,7 @@
 .header {
   display: grid;
   justify-content: space-between;
-  grid-template-columns: 391px 1fr 1fr;
+  grid-template-columns: 399px 1fr 1fr;
   margin-inline: 24px;
   margin-top: 94px;
   margin-bottom: 96px;
@@ -17,6 +17,7 @@
   font-family: Raleway, sans-serif;
   font-size: 18px;
   font-weight: 400;
+  line-height: 21px;
   display: flex;
   list-style: none;
   gap: 13px;
