@@ -13,37 +13,48 @@
     <header class="header menu__section">
       <ul class="menu__list">
         <li class="menu__list-item">
-          <a class="header__menu-link menu__list-item" href="#0">главная</a>
-        </li>
-        <li class="menu__list-item">
-          <a class="header__menu-link header__menu-link__active" href="#0"
-            >посмотреть лоты</a
+          <a class="header__menu-link menu__list-item" id="home" href="#home"
+            >главная</a
           >
         </li>
         <li class="menu__list-item">
-          <a class="header__menu-link header__menu-link__active" href="#0"
-            >об аукционе</a
+          <a
+            class="header__lots header__menu-link header__menu-link__active"
+            href="#lots"
+            ><b class="underline">посмотреть лоты</b></a
+          >
+        </li>
+        <li class="menu__list-item">
+          <a
+            class="header__auction header__menu-link header__menu-link__active"
+            href="#auction"
+            ><b class="underline">об аукционе</b></a
           >
         </li>
       </ul>
-      <div class="logo">
+      <div>
         <a class="header__logo">
           <img
             src="./images/logo-black.svg"
-            alt="Логотип черный на белом"
+            alt="Логотип"
             class="header__logo-image"
           />
         </a>
       </div>
       <address class="contacts">
         <ul class="contacts__list">
-          <li class="contacts__phoneheader__navigation-list-item">
-            <a href="tel:+99995555555">+9 999 555 5555</a>
+          <li class="contacts__list-item">
+            <a href="tel:+99995555555"
+              ><span class="contacts__info">+9 999 555 5555</span></a
+            >
           </li>
-          <li class="header__navigation-list-item">
-            <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+          <li class="contacts__list-item">
+            <a href="mailto:info@sobaka.ge"
+              ><span class="contacts__info">info@sobaka.ge</span></a
+            >
           </li>
-          <li class="header__navigation-list-item">
+
+          <li class="header_contacts__info_navigation-list-item">
             наб. Принсенграхт 263- 265, Амстердам
           </li>
         </ul>
@@ -59,35 +70,37 @@
             >те<span class="accent__span-inner">бе</span></span
           >
           <span class="accent__span text__right"
-            ><span class="accent__span-inner">н</span>адо</span
+            ><span class="accent__span-inner">н</span>ад<span class="char"
+              >о</span
+            ></span
           >
         </h1>
         <div class="slogan__inner">
-          <aside class="slogan">
+          <aside class="slogan__overlay">
             <text class="slogan__text"
               >аукцион вещей, в которые никто не верил</text
             >
-            <button class="btn">сделать ставку</button>
+            <button type="button" class="btn">сделать ставку</button>
           </aside>
         </div>
+        <div class="overlay"></div>
       </section>
       <section class="lots__wrapper">
-        <h2 class="lots__title">лоты</h2>
+        <h2 class="lots__title" id="lots" href="#lots">лоты</h2>
         <ul class="lots__title-list">
           <li class="lots__title-list__item lots__title-list__item-film">
-            <span class="lots__title-list__accent"
-              >Фильм режиссёра, который бросил киношколу</span
-            >
+            <h3 class="lots__title-list__accent">
+              Фильм режиссёра, который бросил киношколу
+            </h3>
             <p>
               Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
               ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
             </p>
           </li>
           <li class="lots__title-list__item lots__title-list__item-book">
-            <span class="lots__title-list__accent"
-              >Книга, где описан один скучный день из жизни рекламного
-              агента</span
-            >
+            <h3 class="lots__title-list__accent">
+              Книга, где описан один скучный день из жизни рекламного агента
+            </h3>
             <p>
               Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
               переходами на древнеанглийский. В ней одновременно рассказывается
@@ -97,9 +110,9 @@
             </p>
           </li>
           <li class="lots__title-list__item lots__title-list__item-picture">
-            <span class="lots__title-list__accent"
-              >Картина, которую повторит даже 5-летний сын маминой подруги</span
-            >
+            <h3 class="lots__title-list__accent">
+              Картина, которую повторит даже 5-летний сын маминой подруги
+            </h3>
             <p>
               Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то
               похожее на инфузорию-туфельку. Никаких полей, лесов, котиков...
@@ -108,21 +121,24 @@
             </p>
           </li>
         </ul>
-        <button class="btn__more">посмотреть больше</button>
+        <button type="button" class="btn__more">посмотреть больше</button>
       </section>
-      <section class="about__wrapper">
+      <section class="about">
         <div class="logo">
-          <a class="header__logo header__logo-about">
-            <img
-              src="./images/logo-black.svg"
-              alt="Логотип черный на белом"
-              class="header__logo-image__about"
-            />
-          </a>
+          <div class="logo__backtrack">
+            <a class="header__logo header__logo-about">
+              <img
+                src="./images/logo-black.svg"
+                alt="Логотип черный на белом"
+                class="header__logo-image__about"
+              />
+            </a>
+          </div>
+
           <div class="logo__wrapper"></div>
         </div>
-        <div class="about__auction">
-          <h3 class="about__title">об аукционе</h3>
+        <div>
+          <h3 class="about__title" id="auction">об аукционе</h3>
           <div class="about__inner">
             <span class="about__inner-start"
               >Здесь вы не встретите очередное пафосное собрание невероятно
@@ -146,38 +162,52 @@
     </main>
   </body>
   <footer class="footer">
-    <address class="contacts__footer">
+    <address class="contacts">
       <ul class="contacts__list">
-        <li class="contacts__phoneheader__navigation-list-item">
-          <a href="tel:+99995555555">+9 999 555 5555</a>
+        <li class="contacts__list-item">
+          <a href="tel:+99995555555"
+            ><span class="contacts__info">+9 999 555 5555</span></a
+          >
         </li>
-        <li class="header__navigation-list-item">
-          <a href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+        <li class="contacts__list-item">
+          <a href="mailto:info@sobaka.ge"
+            ><span class="contacts__info">info@sobaka.ge</span></a
+          >
         </li>
-        <li class="header__navigation-list-item">
+
+        <li class="header_contacts__info_navigation-list-item">
           наб. Принсенграхт 263- 265, Амстердам
         </li>
       </ul>
     </address>
-    <ul class="menu__list menu__list-footer">
-      <li class="menu__list-item">
-        <a class="header__menu-link menu__list-item" href="#0">главная</a>
+    <ul class="menu__list-footer">
+      <li class="menu__list-item__footer">
+        <a class="header__menu-link menu__list-item" id="home" href="#home"
+          >главная</a
+        >
       </li>
       <li class="menu__list-item">
-        <a class="header__menu-link" href="#0">посмотреть лоты</a>
+        <a class="header__lots header__menu-link" id="lots" href="#lots"
+          ><b class="underline">посмотреть лоты</b></a
+        >
       </li>
       <li class="menu__list-item">
-        <a class="header__menu-link" href="#0">об аукционе</a>
+        <a
+          class="header__auction header__menu-link"
+          id="auction"
+          href="#auction"
+          ><b class="underline">об аукционе</b></a
+        >
       </li>
     </ul>
     <div class="btn__social">
-      <a class="btn__social-youtube" href="http://youtube.com">
+      <a class="btn__social-youtube btn__icon" href="http://youtube.com">
         <img src="images/yt.svg" alt="Ссылка на ютьюб" />
       </a>
-      <a class="btn__social-vk" href="http://vk.com">
+      <a class="btn__social-vk btn__icon" href="http://vk.com">
         <img src="images/vk.svg" alt="Ссылка на вэка" />
       </a>
-      <a class="btn__social-pinterest" href="http://pinterest.com">
+      <a class="btn__social-pinterest btn__icon" href="http://pinterest.com">
         <img src="images/pinterest.svg" alt="Ссылка на пинтерест" />
       </a>
     </div>

@@ -1,11 +1,14 @@
 .header {
   display: grid;
-  justify-content: space-between;
-  grid-template-columns: 399px 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
   margin-inline: 24px;
   margin-top: 94px;
   margin-bottom: 96px;
-  width: 1052px;
+  width: 1054px;
+}
+.body {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
 }
 
 .menu__section {
@@ -14,24 +17,33 @@
 }
 
 .menu__list {
-  font-family: Raleway, sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
   display: flex;
   list-style: none;
-  gap: 13px;
+  gap: 11px;
   letter-spacing: 0.01em;
 }
 
 .menu__list-item {
   text-decoration: none;
 }
-/* 
-.header__menu-link__active {
+
+.header__lots {
   text-decoration: none;
-  border-bottom: 1px solid #000;         тут нужно доработать с подчёркиванием(уменьшить по буквам + в номере телефона уменьшить с другой строны)
-} */
+  width: 169px;
+  height: 22px;
+}
+
+.underline {
+  border-bottom: 1px solid #000;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.header__auction {
+  text-decoration: none;
+  width: 129px;
+  height: 22px;
+}
 
 .header__menu-link__active::before {
   content: "";
@@ -43,9 +55,6 @@
   margin-right: 13px;
 }
 
-.logo {
-}
-
 .header__logo {
   display: block;
   width: 148px;
@@ -53,12 +62,21 @@
 }
 
 .header__logo-image {
-  margin-left: 36px;
   height: 105px;
 }
 
 .contacts {
-  font-family: Raleway, sans-serif;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 17px;
+  font-style: normal;
+}
+
+.contacts__list-item {
+  a {
+    text-decoration: none;
+  }
 }
 
 .contacts__list {
@@ -72,39 +90,57 @@
   border-bottom: 1px solid #000;
 }
 
+.contacts__info {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  letter-spacing: 0.01em;
+}
+
 .cover {
-  min-height: 757px;
   color: rgb(255, 255, 255);
 }
 
 .content__section {
+  height: 757px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .cover__title {
   display: flex;
   flex-direction: column;
-  width: 100%;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 100px;
-  line-height: 100%;
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
-  padding: 165px 50px 147px 50px;
+  padding: 161px 50px;
+  position: relative;
+  z-index: 1;
 }
 
 .accent__span {
-  display: block;
   letter-spacing: 0.3em;
-  line-height: 100%;
 }
 
 .accent__span-inner {
   letter-spacing: 0.6em;
+}
+
+.char {
+  letter-spacing: 0;
 }
 
 .text__top {
@@ -116,14 +152,20 @@
 .text__center {
   display: flex;
   justify-content: center;
-  margin-block: 20px;
+  margin: 13px 0 3px;
 }
 
 .text__right {
   display: flex;
-  justify-content: end; /*тут нужно поработать с тем, что не упирается надпись в марджин(как убрать хвост из пробела после слова) */
+  justify-content: flex-end;
 }
-
+.slogan__overlay {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  margin-top: -34px; /*Это точно неправильно, я не знаю как мне поднять высоту, я кажется всё перепробовал.*/
+}
 .slogan__inner {
   display: flex;
   justify-content: space-between; /*хз как стоит раскинуть по краям*/
@@ -135,22 +177,22 @@
 }
 
 .slogan__text {
-  max-width: 637px;
-  width: 100%; /*не могу найти letter-spacing: никак блять -_-; */
+  width: 637px;
+  height: 28px;
+  padding-right: 110px;
 }
 
 .btn {
-  width: 256px;
-  height: 51px;
+  max-width: 256px;
+  max-height: 51px;
   font-weight: 500;
-  font-size: 22px; /* -почему цвет и размер на кнопку не распространился? */
+  font-size: 22px;
   text-transform: uppercase;
   color: #fff;
   background-color: unset;
+  width: 256px;
+  height: 51px;
   border: 1px solid #fff;
-  margin-left: 79px;
-  margin-bottom: 51px;
-  padding: 0;
 }
 
 .btn:active {
@@ -159,16 +201,20 @@
 }
 
 .lots__wrapper {
-  min-width: 1052px;
-  margin-block: 179px 146px;
-  margin-inline: 25px;
+  max-width: 1052px;
+  padding-top: 152px;
+  padding-inline: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .lots__title {
+  display: flex;
   font-weight: 700;
   font-size: 40px;
-  line-height: 47px;
+  line-height: 71px;
   text-transform: uppercase;
+  padding: 8px 0px 13px 39px;
 }
 
 .lots__title-list {
@@ -189,27 +235,31 @@
   line-height: 120%;
   font-weight: 400;
   padding: 51px 40px 48px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__title-list__item::hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .lots__title-list__item-film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__title-list__item-book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__title-list__item-picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .lots__title-list__accent {
@@ -231,7 +281,6 @@
   margin-top: 30px;
   padding: 0;
   border-bottom: 1px solid #000;
-  text-decoration: 1px solid #000;
 }
 
 .btn__more:active {
@@ -239,10 +288,12 @@
   color: red;
 }
 
-.about__wrapper {
-  margin-inline: 24px;
+.about {
+  padding-inline: 24px;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  padding-inline: 30px 8px;
+  padding-block: 288px 3px;
 }
 .about__title {
   text-transform: uppercase;
@@ -292,8 +343,7 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 180px 50px 88px;
-  font-size: 18px;
+  padding: 180px 50px 88px;
 }
 
 .contacts__footer {
@@ -306,31 +356,20 @@
   flex-direction: column;
   text-align: center;
   line-height: 21px;
-  gap: unset;
+  list-style: none;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .btn__social {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-
   gap: 48px;
 }
 
-.btn__social:hover {
-}
-
-.btn__social-youtube {
-  width: 48px;
-  height: 48px;
-}
-
-.btn__social-vk {
-  width: 48px;
-  height: 48px;
-}
-
-.btn__social-pinterest {
+.btn__icon {
   width: 48px;
   height: 48px;
 }
