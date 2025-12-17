@@ -1,1 +1,398 @@
-/* место для вашего кода */
+.header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  margin-inline: 24px;
+  margin-top: 94px;
+  margin-bottom: 96px;
+  width: 1054px;
+}
+.body {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+}
+
+.menu__section {
+  align-items: center;
+  padding-inline: 26px;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+  gap: 11px;
+  letter-spacing: 0.01em;
+}
+
+.menu__list-item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.header__lots {
+  text-decoration: none;
+  width: 169px;
+  height: 22px;
+}
+
+.underline {
+  border-bottom: 1px solid #000;
+  line-height: 19px;
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.header__auction {
+  text-decoration: none;
+  padding-left: 2px;
+}
+
+.header__menu-link__active::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-right: 11px;
+}
+
+.header__logo {
+  display: block;
+  width: 148px;
+  height: 105px;
+}
+
+.header__logo-image {
+  height: 105px;
+  padding-right: 4px;
+}
+
+.contacts {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 17px;
+  font-style: normal;
+}
+
+.contacts__list-item {
+  a {
+    text-decoration: none;
+  }
+}
+
+.contacts__list {
+  list-style: none;
+  width: 213px;
+  font-size: 18px;
+  line-height: 24.3px;
+  font-style: normal;
+}
+
+.contacts__phone {
+  border-bottom: 1px solid #000;
+}
+
+.contacts__info {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  letter-spacing: 0.01em;
+}
+
+.cover {
+  color: rgb(255, 255, 255);
+}
+
+.content__section {
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  padding-inline: 50px;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.cover__title {
+  display: flex;
+  flex-direction: column;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 126px;
+}
+
+.accent__span {
+  letter-spacing: 0.3em;
+}
+
+.accent__span-inner {
+  letter-spacing: 0.6em;
+}
+
+.char {
+  letter-spacing: 0;
+}
+
+.text__top {
+  display: flex;
+  justify-content: start;
+  line-height: 115%;
+  margin-top: 162px;
+}
+
+.text__center {
+  display: flex;
+  justify-content: center;
+  margin: 13px 0 3px;
+}
+
+.text__right {
+  display: flex;
+  justify-content: flex-end;
+}
+.slogan__overlay {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 52px;
+}
+.slogan__inner {
+  display: flex;
+  justify-content: space-between; /*хз как стоит раскинуть по краям*/
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.slogan__text {
+  word-spacing: 18.5px;
+  margin-left: 28px;
+}
+
+.btn {
+  width: 256px;
+  height: 51px;
+  font-weight: 500;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: unset;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #351351;
+  color: red;
+}
+
+.lots__wrapper {
+  padding-top: 157px;
+  padding-inline: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lots__title {
+  display: flex;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 71px;
+  text-transform: uppercase;
+  padding: 8px 0px 15px 39px;
+}
+
+.lots__title-list {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  list-style: none;
+  position: relative;
+  z-index: 2;
+}
+
+.lots__title-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 334px;
+  min-height: 563px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-weight: 400;
+  padding: 51px 40px 48px 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lots__title-list__item::hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.lots__title-list__item-film {
+  background-image: url(../images/card-lot-01.jpg);
+  position: relative;
+}
+
+.lots__title-list__item-book {
+  background-image: url(../images/card-lot-02.jpg);
+  position: relative;
+}
+
+.lots__title-list__item-picture {
+  background-image: url(../images/card-lot-03.jpg);
+  position: relative;
+}
+
+.lots__title-list__accent {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  z-index: 1;
+}
+
+.information {
+  font-weight: 400;
+  z-index: 1;
+}
+
+.btn__more {
+  font-size: 20px;
+  width: 192px;
+  background-color: unset;
+  border: unset;
+  margin-left: 40px;
+  margin-top: 30px;
+  padding: 0;
+  letter-spacing: 0.43px;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+
+.btn__more:active {
+  background-color: #351351;
+  color: red;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* padding-left: 71px;
+  padding-block: 180px 3px; */
+  padding-left: 25px;
+  padding-bottom: 2px;
+  padding-top: 281px;
+}
+.about__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.header__logo-image__about {
+  filter: invert(1);
+  width: 148px;
+  height: 114px;
+  transform: translate(31%, 57%);
+}
+
+.logo {
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  background-color: #000;
+  position: relative;
+  left: 47px;
+  bottom: 101px;
+}
+
+.logo__wrapper {
+  position: relative;
+}
+
+.about__inner {
+  display: inline-grid;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.about__inner-start {
+  padding-top: 100px;
+  padding-right: 29px;
+}
+
+.about__inner-end {
+  padding-top: 24px;
+  padding-right: 24px;
+}
+
+.our {
+  letter-spacing: 0.01em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 180px 50px 88px;
+}
+
+.contacts__adress {
+}
+
+.contacts__footer {
+  font-size: 18px;
+  line-height: 24.3px;
+}
+
+.menu__list-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style: none;
+  padding-left: 24px;
+}
+
+.menu__list-item__footer {
+  padding-left: 3px;
+}
+.btn__social {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 48px;
+}
+
+.btn__icon {
+  width: 48px;
+  height: 48px;
+}
